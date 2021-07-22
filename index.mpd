@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!-- MPD file Generated with GPAC version 1.0.1-revrelease at 2021-07-03T05:08:36.767Z -->
+<MPD xmlns="urn:mpeg:dash:schema:mpd:2011" minBufferTime="PT1.500S" type="static" mediaPresentationDuration="PT0H3M21.000S" maxSegmentDuration="PT0H0M10.080S" profiles="urn:mpeg:dash:profile:full:2011">
+ <ProgramInformation moreInformationURL="http://gpac.io">
+  <Title>Mix</Title>
+ </ProgramInformation>
+
+ <Period duration="PT0H3M21.000S">
+
+  <AdaptationSet id="0" contentType="video" segmentAlignment="true" maxWidth="1280" maxHeight="720" maxFrameRate="25" par="16:9" lang="und" startWithSAP="1">
+   <SegmentTemplate media="sv1-v-i$Number$.m4s" initialization="https://ipc-mpd-video-example.s3.eu-west-1.amazonaws.com/sv1-v-iinit.mp4" timescale="12800" startNumber="162506882" duration="128000"/>
+   <Representation id="0" mimeType="video/mp4" codecs="avc1.64001F" width="1280" height="720" frameRate="25" sar="1:1" bandwidth="1475518">
+   </Representation>
+  </AdaptationSet>
+
+  <AdaptationSet id="1" contentType="audio" segmentAlignment="true" lang="und" startWithSAP="1">
+   <SegmentTemplate media="sv1-a-i$Number$.webm" initialization="https://ipc-mpd-video-example.s3.eu-west-1.amazonaws.com/sv1-a-iinit.webm" timescale="1000" startNumber="162506882" duration="10000"/>
+   <Representation id="1" mimeType="audio/webm" codecs="opus" bandwidth="96000" audioSamplingRate="48000">
+    <AudioChannelConfiguration schemeIdUri="urn:mpeg:dash:23003:3:audio_channel_configuration:2011" value="2"/>
+   </Representation>
+  </AdaptationSet>
+
+ </Period>
+</MPD>
